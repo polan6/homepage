@@ -15,7 +15,7 @@ const Header = () => {
 
 			<div className="header">
 				<div className="header__text">
-					<Link to="/homepage">
+					<Link to="/">
 						<h1>
 							Polanのホームページ</h1>
 					</Link>
@@ -24,13 +24,13 @@ const Header = () => {
 				<div className="header__menu">
 					<ul className='header__menu-items'>
 						<li className='header__menu-items-item'>
-							<Link to="/homepage/" onClick={toggleHamburger}>
+							<Link to="/" onClick={toggleHamburger}>
 								<FontAwesomeIcon icon={faHouse} />
 								ホーム
 							</Link>
 						</li>
 						<li className='header__menu-items-item'>
-							<Link to="/homepage/board/" onClick={toggleHamburger}>
+							<Link to="/board" onClick={toggleHamburger}>
 								<FontAwesomeIcon icon={faPencil} />
 								掲示板
 							</Link>

@@ -7,15 +7,17 @@ import Board from './component/Board'
 import './App.css'
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 
+
+export const ROUTER_BASENAME =process.env.NODE_ENV === 'development' ? '/' : '/homepage'
 function App() {
 
   return (
-    <Router>
+    <Router basename={ROUTER_BASENAME}>
       <Header/>
 			<div className="page-content">
 			<Routes>
-				<Route path='/homepage/' element={<Home/>}></Route>
-				<Route path='/homepage/board/' element={<Board/>}></Route>
+				<Route path='/' element={<Home/>}></Route>
+				<Route path='/board' element={<Board/>}></Route>
 			</Routes>
 			</div>
 			<Footer/>
