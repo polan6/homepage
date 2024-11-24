@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse,faPencil } from '@fortawesome/free-solid-svg-icons'
+import { faChain, faHouse,faPencil } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 	const toggleHamburger=()=>{
@@ -34,6 +34,12 @@ const Header = () => {
 								<FontAwesomeIcon icon={faPencil} />
 								掲示板
 							</Link>
+						</li>
+						<li className='header__menu-items-item'>
+							<a href="https://github.com/polan6/homepage" onClick={toggleHamburger}>
+								<FontAwesomeIcon icon={faChain} />
+								github
+							</a>
 						</li>
 					</ul>
 
