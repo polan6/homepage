@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { auth,provider } from '../firebase'
-import { signInWithPopup } from 'firebase/auth'
+import { signInWithPopup,signOut } from 'firebase/auth'
 
 const Board = () => {
 	const [isLogin,setIsLogin]=useState(localStorage.getItem("isLogin"))
@@ -12,6 +12,7 @@ const Board = () => {
 	}
 	const logout=()=>{
 		signOut(auth).then(()=>{
+			console.log(1)
 			localStorage.clear()
 			setIsLogin(false)
 		})
@@ -24,6 +25,7 @@ const Board = () => {
 			<div>
 				<p>ログインして書き込む</p>
 				<button onClick={login}>Googleでログイン</button>
+				
 			</div>
 		):(
 			<div>
