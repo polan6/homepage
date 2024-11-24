@@ -1,9 +1,37 @@
 import React, { useState } from 'react'
+import { auth,provider } from '../firebase'
+import { signInWithPopup } from 'firebase/auth'
 
 const Board = () => {
-	const [isLogin,setIsLogin]=useState()
+	const [isLogin,setIsLogin]=useState(localStorage.getItem("isLogin"))
+	const login=()=>{
+		signInWithPopup(auth,provider).then((result)=>{
+			localStorage.setItem('isLogin',true)
+			setIsLogin(true)
+		})
+	}
+	const logout=()=>{
+		signOut(auth).then(()=>{
+			localStorage.clear()
+			setIsLogin(false)
+		})
+	}
+
+
 	return (
-		<div>作成中</div>
+		<div>
+		{!isLogin?(
+			<div>
+				<p>ログインして書き込む</p>
+				<button onClick={login}>Googleでログイン</button>
+			</div>
+		):(
+			<div>
+				<p>ログアウトする</p>
+				<button onClick={logout}>ログアウト</button>
+			</div>
+		)}
+		</div>
 	)
 }
 

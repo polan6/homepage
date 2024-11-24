@@ -14,8 +14,8 @@ function App() {
       <Header/>
 			<div className="page-content">
 			<Routes>
-				<Route path='/' element={<Home/>}></Route>
-				<Route path='/board' element={<Board/>}></Route>
+				<Route path='/homepage' element={<Home/>}></Route>
+				<Route path='/homepage/board' element={<Board/>}></Route>
 			</Routes>
 			</div>
 			<Footer/>
