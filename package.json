@@ -5,13 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
+    "build": "vite build && cp -r dist docs",
+		"rebuild": "vite build && rm -R docs && cp -r dist docs",
+    "git": "git add . && git commit -m 'commit' && git push origin main",
+		"lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.1",
+    "@fortawesome/free-brands-svg-icons": "^6.7.1",
+    "@fortawesome/free-regular-svg-icons": "^6.7.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
