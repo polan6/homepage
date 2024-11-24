@@ -20,12 +20,12 @@ const Board = () => {
 
 
 	return (
-		<div>
+		<div className='content'>
 		{!isLogin?(
 			<div>
 				<p>ログインして書き込む</p>
 				<button onClick={login}>Googleでログイン</button>
-				
+
 			</div>
 		):(
 			<div>
