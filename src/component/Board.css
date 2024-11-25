@@ -4,6 +4,9 @@
 	/* height: calc(100vh + 100px); */
 	padding: 10px
 }
+.board__content h1{
+	margin: 5px 0px;
+}
 
 .loginMenu p{
 	margin: 0;

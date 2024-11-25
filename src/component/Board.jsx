@@ -77,6 +77,7 @@ const Board = () => {
 
 	return (
 		<div className='board__content'>
+		<h1>掲示板</h1>
 		{!isLogin?(
 			<>
 			<div className='loginMenu'>
