@@ -58,7 +58,7 @@ const Board = () => {
 		const date=new Date(Date.now() + ((new Date().getTimezoneOffset() + (9 * 60)) * 60 * 1000));
 		const y=date.getFullYear()
 		const mo=( '00' + (date.getMonth()+1) ).slice( -2 )
-		const d=( '00' + date.getDay() ).slice( -2 )
+		const d=( '00' + date.getDate() ).slice( -2 )
 		const h=( '00' + date.getHours() ).slice( -2 )
 		const mi=( '00' + date.getMinutes() ).slice( -2 )
 		const s=( '00' + date.getSeconds() ).slice( -2 )
