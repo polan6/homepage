@@ -8,6 +8,7 @@ import './App.css'
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 
 
+// eslint-disable-next-line no-undef, react-refresh/only-export-components
 export const ROUTER_BASENAME =process.env.NODE_ENV === 'development' ? '/' : '/homepage'
 function App() {
 
