@@ -62,7 +62,9 @@ const Board = () => {
 		const h=( '00' + date.getHours() ).slice( -2 )
 		const mi=( '00' + date.getMinutes() ).slice( -2 )
 		const s=( '00' + date.getSeconds() ).slice( -2 )
+		console.log(`${y}/${mo}/${d} ${h}:${mi}:${s}`)
 		return `${y}/${mo}/${d} ${h}:${mi}:${s}`;
+		
 	}
 
 	useEffect(()=>{
