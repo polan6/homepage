@@ -110,6 +110,12 @@ const Weather = () => {
 				)
 			})}
 			</div>
+			<div>
+				天気予報API:
+				<a href='https://weather.tsukumijima.net/'>
+				https://weather.tsukumijima.net/
+				</a>
+			</div>
 		</div>
 
 	)
