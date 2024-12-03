@@ -65,7 +65,7 @@
 }
 
 
-.homePage{
+.postList{
 	width: 100%;
 	/* height:calc(100vh - 80px); */
 	display: flex;
@@ -73,7 +73,7 @@
 	flex-direction: column;
 	padding: 20px 0px;
 }
-.homePage .postContents{
+.postList .postContents{
 	width: 80%;
 	height: auto;
 	/* max-height: 600px; */
@@ -96,7 +96,7 @@
 	width: 100%;
 	margin: 5px 0px;
 }
-.nameAndDeleteButton button{
+.postContents button{
 	flex:10%;
 	background-color: crimson;
 	color: white;
@@ -106,11 +106,11 @@
 	cursor: pointer;
 	transition: background-color 0.3s;
 }
-.nameAndDeleteButton button:hover{
+.postContents button:hover{
 	background-color: red;
 }
 
-.nameAndDeleteButton h3{
+.postContents h3{
 	flex: 90%;
 	margin: auto;
 }

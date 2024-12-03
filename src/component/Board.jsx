@@ -115,11 +115,10 @@ const Board = () => {
 			</>
 
 		)}
-		<div className='homePage'>
+		<div className='postList'>
 			{postList.map((post)=>{
 				return (
 			<div className="postContents" key={post.id}>
-				<div className="nameAndDeleteButton">
 					<h3>@{post.user}</h3>
 					<div className="postTextContainer">
 					{post.postText}
@@ -130,7 +129,7 @@ const Board = () => {
 					{post.author.id===auth.currentUser?.uid&&(
 					<button onClick={()=>handleDelete(post.id)}>削除</button>
 					)}
-				</div>
+
 				
 			</div>
 				)
