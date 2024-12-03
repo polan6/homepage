@@ -1,0 +1,30 @@
+.weather__content{
+	color: black;
+	/* background-color: aqua; */
+	/* height: calc(100vh + 100px); */
+	padding: 10px
+}
+.weather__content h1{
+	margin: 5px 0px;
+}
+
+.weather__block{
+	border: 3px solid red;
+	margin: 5px 0px;
+	padding: 5px;
+	border-radius: 5px;
+	max-width: 350px;
+}
+.weather__block h3{
+	margin: 5px 0px;
+}
+
+.weather__chanceOfRain{
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+.weather__chanceOfRain th,td{
+	border: 1px solid #000;
+	width: 80px;
+	text-align: center;
+}

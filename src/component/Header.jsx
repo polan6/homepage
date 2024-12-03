@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChain, faHouse,faPencil } from '@fortawesome/free-solid-svg-icons'
+import { faChain, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 	const toggleHamburger=()=>{
@@ -33,6 +33,12 @@ const Header = () => {
 							<Link to="/board" onClick={toggleHamburger}>
 								<FontAwesomeIcon icon={faPencil} />
 								掲示板
+							</Link>
+						</li>
+						<li className='header__menu-items-item'>
+							<Link to="/weather" onClick={toggleHamburger}>
+								<FontAwesomeIcon icon={faSun} />
+								天気予報
 							</Link>
 						</li>
 						<li className='header__menu-items-item'>
