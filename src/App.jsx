@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import Header from './component/Header'
-import Footer from './component/Footer'
-import Home from './component/Home'
-import Board from './component/Board'
-import Weather from './component/Weather'
+import Header from './component/assets/Header'
+import Footer from './component/assets/Footer'
+import Home from './component/pages/Home'
+import Board from './component/pages/Board'
+import Weather from './component/pages/Weather'
+import Depression from './component/pages/Depression'
 
 import './App.css'
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
@@ -21,6 +22,7 @@ function App() {
 				<Route path='/' element={<Home/>}></Route>
 				<Route path='/board' element={<Board/>}></Route>
 				<Route path='/weather' element={<Weather/>}></Route>
+				<Route path='/depression' element={<Depression/>}></Route>
 			</Routes>
 			</div>
 			<Footer/>

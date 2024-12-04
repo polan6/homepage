@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from 'react'
-import { auth,provider,db } from '../firebase'
+import { auth,provider,db } from '../../firebase'
 import { signInWithPopup,signOut } from 'firebase/auth'
 import { collection, addDoc,getDocs,deleteDoc,doc,limit,orderBy,query } from "firebase/firestore";
 import './Board.css'

@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChain, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faChain, faCross, faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons'
 
 const Header = () => {
 	const toggleHamburger=()=>{
@@ -42,9 +43,15 @@ const Header = () => {
 							</Link>
 						</li>
 						<li className='header__menu-items-item'>
+							<Link to="/depression" onClick={toggleHamburger}>
+								<FontAwesomeIcon icon={faHospital} />
+								うつ病チェック
+							</Link>
+						</li>
+						<li className='header__menu-items-item'>
 							<a href="https://github.com/polan6/homepage" onClick={toggleHamburger}>
 								<FontAwesomeIcon icon={faChain} />
-								github
+								GitHub
 							</a>
 						</li>
 					</ul>
