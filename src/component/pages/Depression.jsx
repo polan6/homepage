@@ -25,31 +25,31 @@ const Depression = () => {
 				setResult(<>
 					<h2>結果</h2>
 					<h3>{score}点 : 正常</h3>
-					<span>心身の不調を感じた時は、医療機関に相談してください。</span>
+					心身の不調を感じた時は、医療機関に相談してください。
 				</>)
 			}else if(score<=10){
 				setResult(<>
 					<h2>結果</h2>
 					<h3>{score}点 : 軽度</h3>
-					<span>うつ病の可能性がありますので、医療機関などに相談することをおすすめします。</span>
+					うつ病の可能性がありますので、医療機関などに相談することをおすすめします。
 				</>)
 			}else if(score<=15){
 				setResult(<>
 					<h2>結果</h2>
 					<h3>{score}点 : 中等度</h3>
-					<span>うつ病の可能性がありますので、医療機関などに相談することをおすすめします。</span>
+					うつ病の可能性がありますので、医療機関などに相談することをおすすめします。
 				</>)
 			}else if(score<=20){
 				setResult(<>
 					<h2>結果</h2>
 					<h3>{score}点 : 重度</h3>
-					<span>うつ病の可能性がありますので、医療機関などに相談することをおすすめします。</span>
+					うつ病の可能性がありますので、医療機関などに相談することをおすすめします。
 				</>)
 			}else if(score<=27){
 				setResult(<>
 					<h2>結果</h2>
 					<h3>{score}点 : 極めて重度</h3>
-					<span>うつ病の可能性がありますので、医療機関などに相談することをおすすめします。</span>
+					うつ病の可能性がありますので、医療機関などに相談することをおすすめします。
 				</>)
 			}
 		}
@@ -116,11 +116,13 @@ const Depression = () => {
 			
 			<div className='depression__errmsg'>{errmsg}</div>
 			<div className='depression__result'>{result}</div>
-			出典
-			<div>
-				<a href='https://www.mhlw.go.jp/bunya/shougaihoken/kokoro/dl/02.pdf'>
-				https://www.mhlw.go.jp/bunya/shougaihoken/kokoro/dl/02.pdf
-				</a>
+			<div className='depression__footer'>
+				出典
+				<div>
+					<a href='https://www.mhlw.go.jp/bunya/shougaihoken/kokoro/dl/02.pdf'>
+					https://www.mhlw.go.jp/bunya/shougaihoken/kokoro/dl/02.pdf
+					</a>
+				</div>
 			</div>
 		</div>
 	)
