@@ -6,6 +6,11 @@
 }
 .weather__content h1{
 	margin: 5px 0px;
+	
+}
+
+.weather__forecast{
+	font-size:85%;
 }
 
 .weather__block{
@@ -16,7 +21,13 @@
 	max-width: 350px;
 }
 .weather__block h3{
-	margin: 5px 0px;
+	margin: 0px 0px;
+	
+}
+
+.weather__image{
+	width:2.5em;
+	vertical-align: middle;
 }
 
 .weather__chanceOfRain{

@@ -7,9 +7,9 @@ const apiURL="https://weather.tsukumijima.net/api/forecast"
 const Weather = () => {
 
 
-	const tokyo={city:"東京",id:130010}
 
-	const [city,setCity]=useState(tokyo)
+
+	const [city,setCity]=useState(cityData.cityList["東京都"][0])
 	const [pref,setPref]=useState("東京都")
 	const [region,setRegion]=useState("関東")
 	const [cityList,setCityList]=useState(cityData.cityList["東京都"])
@@ -22,7 +22,7 @@ const Weather = () => {
 		axios.get(`${apiURL}/city/${city.id}`)
 		.then((res)=>{
 			//console.log(res.data)
-			//console.log(res.data.forecasts[0])
+			console.log(res.data.forecasts[0])
 			setWeatherData(res.data.forecasts)
 		})
 	},[city])
@@ -84,6 +84,11 @@ const Weather = () => {
 						</div>
 						<div className='weather__telop'>
 					 		天気：{data.telop}
+							 <img src={data.image.url} className='weather__image'/>
+						</div>
+						<div ></div>
+						<div className='weather__temperature'>
+							最高気温{data.temperature.max.celsius||'-'}℃・最低気温{data.temperature.min.celsius||'--'}℃
 						</div>
 						<div >
 							降水確率
