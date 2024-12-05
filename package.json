@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build && cp -r dist docs",
     "rebuild": "vite build && rm -R docs && cp -r dist docs",
-    "git": "git add . && git commit -m 'うつ病チェックの追加' && git push origin main",
+    "git": "git add . && git commit -m '未入力時の自動スクロール' && git push origin main",
     "lint": "eslint .",
     "preview": "vite preview"
   },
