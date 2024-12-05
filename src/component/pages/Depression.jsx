@@ -20,11 +20,29 @@ const Depression = () => {
 		// console.log(score)
 		if(score===-1){
 			setErrmsg('未入力の項目があります')
-			const jump=curSheet.findIndex(e=>e===-1)
+
+			const jump = curSheet.findIndex(e => e === -1);
 			var speed = 500;
-			var target = $(`#question_${jump}`);
-			var position = target.offset().top-70;
-			$("html, body").animate({scrollTop:position}, speed, "swing");
+			var target = document.querySelector(`#question_${jump}`);
+			var position = target.getBoundingClientRect().top + window.pageYOffset - 70;
+
+			var startTime = null;
+			function scrollToPosition(timestamp) {
+				if (!startTime) startTime = timestamp;
+				var progress = timestamp - startTime;
+				var scrollPosition = window.pageYOffset + (position - window.pageYOffset) * (progress / speed);
+
+				window.scrollTo(0, scrollPosition);
+
+				if (progress < speed) {
+					requestAnimationFrame(scrollToPosition);
+				} else {
+					window.scrollTo(0, position); // 最終位置に微調整
+				}
+			}
+
+			requestAnimationFrame(scrollToPosition);
+
 			return false;
 
 			// setTimeout(()=>{
