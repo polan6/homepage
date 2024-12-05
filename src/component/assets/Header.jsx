@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChain, faCross, faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
-import { faNodeJs } from '@fortawesome/free-brands-svg-icons'
+import { faChain,  faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
+
 
 const Header = () => {
 	const toggleHamburger=()=>{

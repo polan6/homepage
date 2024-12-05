@@ -1,6 +1,9 @@
 
 import React from 'react'
 import './Home.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
+import { faChain,  faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
 const Home = () => {
 	return (
 		<div className='content'>
@@ -9,7 +12,42 @@ const Home = () => {
 			<div>好きなこと: コンピュータ・プログラミングの勉強</div>
 			<div>やりたいこと: 執筆活動</div>
 			
-			
+			<div className="links__container">
+				<h1>リンク</h1>
+				<ul className='links__items'>
+					<li className='links__items-item'>
+						<Link to="/" >
+							<FontAwesomeIcon icon={faHouse} />
+							ホーム
+						</Link>
+					</li>
+					<li className='links__items-item'>
+						<Link to="/board">
+							<FontAwesomeIcon icon={faPencil} />
+							掲示板
+						</Link>
+					</li>
+					<li className='links__items-item'>
+						<Link to="/weather" >
+							<FontAwesomeIcon icon={faSun} />
+							天気予報
+						</Link>
+					</li>
+					<li className='links__items-item'>
+						<Link to="/depression" >
+							<FontAwesomeIcon icon={faHospital} />
+							うつ病チェック
+						</Link>
+					</li>
+					<li className='links__items-item'>
+						<a href="https://github.com/polan6/homepage" >
+							<FontAwesomeIcon icon={faChain} />
+							GitHub
+						</a>
+					</li>
+				</ul>
+
+			</div>
 
 
 		</div>

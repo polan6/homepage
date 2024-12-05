@@ -16,9 +16,13 @@ const Depression = () => {
 	}
 	const showResult=()=>{
 		const score=depSheet.calcScore(curSheet)
-		console.log(score)
+		// console.log(score)
 		if(score===-1){
 			setErrmsg('未入力の項目があります')
+			const jump=curSheet.findIndex(e=>e===-1)
+			setTimeout(()=>{
+				location.hash=`question_${jump}`
+			},500)
 		}else{
 			setErrmsg('')
 			if(score<=5){
@@ -90,6 +94,7 @@ const Depression = () => {
 				{depSheet.sheet.map((question,i_q)=>{
 					return (
 						<div key={`question_${i_q}`} className='depression__question'>
+							<a id={`question_${i_q}`}></a>
 							<h3>{question.q}</h3>
 							<div className='depression__errmsg'>{errmsg&&curSheet[i_q]===-1&&"未入力です"}</div>
 							<div className='depression__answer'>

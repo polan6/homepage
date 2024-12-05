@@ -148,7 +148,7 @@ export const depSheet={
 	],
 	
 	calcScore:(sheet)=>{
-		console.log('min',Math.min(...sheet))
+		// console.log('min',Math.min(...sheet))
 		if(Math.min(...sheet)===-1){
 			return -1 //未記入あり
 		}
