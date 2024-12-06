@@ -21,33 +21,24 @@ const Depression = () => {
 		if(score===-1){
 			setErrmsg('未入力の項目があります')
 
-			const jump = curSheet.findIndex(e => e === -1);
-			var speed = 500;
-			var target = document.querySelector(`#question_${jump}`);
-			var position = target.getBoundingClientRect().top + window.pageYOffset - 70;
+			// curSheet 配列から -1 のインデックスを取得
+			const jump = curSheet.indexOf(-1);
 
-			var startTime = null;
-			function scrollToPosition(timestamp) {
-				if (!startTime) startTime = timestamp;
-				var progress = timestamp - startTime;
-				var scrollPosition = window.pageYOffset + (position - window.pageYOffset) * (progress / speed);
+			// 対象の要素を取得
+			const target = document.getElementById(`question_${jump}`);
 
-				window.scrollTo(0, scrollPosition);
+			// 対象の位置を取得（70px のオフセットを引く）
+			const position = target.getBoundingClientRect().top + window.scrollY - 70;
 
-				if (progress < speed) {
-					requestAnimationFrame(scrollToPosition);
-				} else {
-					window.scrollTo(0, position); // 最終位置に微調整
-				}
-			}
+			// スムーズスクロールを実行
+			window.scrollTo({
+				top: position,
+				behavior: 'smooth'
+			});
 
-			requestAnimationFrame(scrollToPosition);
-
+			// スクロールが完了する前にページが遷移するのを防ぐ
 			return false;
 
-			// setTimeout(()=>{
-			// 	// location.hash=`question_${jump}`
-			// },500)
 		}else{
 			setErrmsg('')
 			if(score<=5){

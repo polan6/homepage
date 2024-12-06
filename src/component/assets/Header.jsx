@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChain,  faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
-
+import LinkList from '../assets/LinkList'
 
 const Header = () => {
 	const toggleHamburger=()=>{
@@ -23,7 +23,7 @@ const Header = () => {
 				</div>
 
 				<div className="header__menu">
-					<ul className='header__menu-items'>
+					{/* <ul className='header__menu-items'>
 						<li className='header__menu-items-item'>
 							<Link to="/" onClick={toggleHamburger}>
 								<FontAwesomeIcon icon={faHouse} />
@@ -54,9 +54,10 @@ const Header = () => {
 								GitHub
 							</a>
 						</li>
-					</ul>
-
+					</ul> */}
+					<LinkList isHam={true}/>
 				</div>
+				
 				<button className="header__hamburger" onClick={toggleHamburger}>
 					<span></span>
   				<span></span>

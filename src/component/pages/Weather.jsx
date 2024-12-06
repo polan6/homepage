@@ -88,7 +88,7 @@ const Weather = () => {
 						</div>
 						<div ></div>
 						<div className='weather__temperature'>
-							最高気温{data.temperature.max.celsius||'-'}℃・最低気温{data.temperature.min.celsius||'--'}℃
+							最高気温{data.temperature.max.celsius||'--'}℃・最低気温{data.temperature.min.celsius||'--'}℃
 						</div>
 						<div >
 							降水確率

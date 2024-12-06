@@ -3,7 +3,9 @@ import React from 'react'
 import './Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
+
 import { faChain,  faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
+import LinkList from '../assets/LinkList'
 const Home = () => {
 	return (
 		<div className='content'>
@@ -11,10 +13,10 @@ const Home = () => {
 			<div>名前: Polan</div>
 			<div>好きなこと: コンピュータ・プログラミングの勉強</div>
 			<div>やりたいこと: 執筆活動</div>
-			
+			{/* links__container links__items links__items-item*/}
 			<div className="links__container">
 				<h1>リンク</h1>
-				<ul className='links__items'>
+				{/* <ul className='links__items'>
 					<li className='links__items-item'>
 						<Link to="/" >
 							<FontAwesomeIcon icon={faHouse} />
@@ -45,10 +47,10 @@ const Home = () => {
 							GitHub
 						</a>
 					</li>
-				</ul>
-
+				</ul> */}
+				<LinkList isHam={false}/>
 			</div>
-
+			
 
 		</div>
 	)
