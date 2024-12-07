@@ -29,7 +29,7 @@ function App() {
 		setAccessCount(snap.data().count)
 	}
 	useEffect(()=>{
-		if(process.env.NODE_ENV!=="production"&&(!isLoaded)){
+		if(process.env.NODE_ENV==="production"&&(!isLoaded)){
 			access()
 			setisLoaded(true)
 			localStorage.setItem('isLoaded',true)
