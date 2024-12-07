@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './component/assets/Header'
 import Footer from './component/assets/Footer'
 import Home from './component/pages/Home'
@@ -13,6 +13,10 @@ import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 // eslint-disable-next-line no-undef, react-refresh/only-export-components
 export const ROUTER_BASENAME =process.env.NODE_ENV === 'development' ? '/' : '/homepage'
 function App() {
+	useEffect(()=>{
+		console.log(process.env.NODE_ENV)
+	},[])
+
 
   return (
     <Router basename={ROUTER_BASENAME}>
