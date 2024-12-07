@@ -15,7 +15,7 @@ import { doc, updateDoc, increment,collection,getDoc } from "firebase/firestore"
 // eslint-disable-next-line no-undef, react-refresh/only-export-components
 export const ROUTER_BASENAME =process.env.NODE_ENV === 'development' ? '/' : '/homepage'
 function App() {
-	const [isLoaded,setisLoaded]=useState(localStorage.getItem("isLoaded"))
+	const [isLoaded,setisLoaded]=useState(sessionStorage.getItem("isLoaded"))
 	const [accessCount,setAccessCount]=useState('')
 	const access=async()=>{
 		await updateDoc(doc(db, "access", "counter"), {
@@ -32,7 +32,8 @@ function App() {
 		if(process.env.NODE_ENV==="production"&&(!isLoaded)){
 			access()
 			setisLoaded(true)
-			localStorage.setItem('isLoaded',true)
+			sessionStorage.setItem('isLoaded',true)
+			//localStorage.setItem('isLoaded',true)
 		}else{
 			getCount()
 		}
