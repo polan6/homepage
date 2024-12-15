@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build && cp -r dist docs",
     "rebuild": "vite build && rm -R docs && cp -r dist docs",
-    "git": "git add . && git commit -m 'アクセスカウンターの追加' && git push origin main",
+    "git": "git add . && git commit -m '細かな修正' && git push origin main",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -21,7 +21,11 @@
     "firebase": "^11.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^7.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
     "vite-plugin-env-compatible": "^2.0.1"
   },
   "devDependencies": {

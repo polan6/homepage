@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChain,  faHospital, faHouse,faPencil, faQ, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faChain,  faCommentDots,  faHospital, faHouse,faPencil, faQ, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const LinkList = ({isHam}) => {
 	const toggleHamburger=()=>{
@@ -38,6 +38,12 @@ const LinkList = ({isHam}) => {
 					うつ病チェック
 				</Link>
 			</li>
+			{/* <li className={isHam?'header__menu-items-item':"links__items-item"}>
+				<Link to="/interview" onClick={isHam?toggleHamburger:()=>{}}>
+					<FontAwesomeIcon icon={faCommentDots} />
+					技術面接質問集
+				</Link>
+			</li> */}
 			<li className={isHam?'header__menu-items-item':"links__items-item"}>
 				<a href="https://github.com/polan6/homepage" onClick={isHam?toggleHamburger:()=>{}}>
 					<FontAwesomeIcon icon={faChain} />

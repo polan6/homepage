@@ -5,6 +5,7 @@ import Home from './component/pages/Home'
 import Board from './component/pages/Board'
 import Weather from './component/pages/Weather'
 import Depression from './component/pages/Depression'
+import Interview from './component/pages/Interview'
 
 import './App.css'
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
@@ -15,25 +16,23 @@ import { doc, updateDoc, increment,collection,getDoc } from "firebase/firestore"
 // eslint-disable-next-line no-undef, react-refresh/only-export-components
 export const ROUTER_BASENAME =process.env.NODE_ENV === 'development' ? '/' : '/homepage'
 function App() {
-	const [isLoaded,setisLoaded]=useState(sessionStorage.getItem("isLoaded"))
+	const [isLoaded,setIsLoaded]=useState(sessionStorage.getItem("isLoaded"))
 	const [accessCount,setAccessCount]=useState('')
 	const access=async()=>{
 		await updateDoc(doc(db, "access", "counter"), {
 			count: increment(1)
 		});
-		const snap=await getDoc(doc(db, "access", "counter"));
-		setAccessCount(snap.data().count)
+		await getCount()
 	}
 	const getCount=async()=>{
 		const snap=await getDoc(doc(db, "access", "counter"));
-		setAccessCount(snap.data().count)
+		setAccessCount(snap.data()?.count)
 	}
 	useEffect(()=>{
 		if(process.env.NODE_ENV==="production"&&(!isLoaded)){
 			access()
-			setisLoaded(true)
+			setIsLoaded(true)
 			sessionStorage.setItem('isLoaded',true)
-			//localStorage.setItem('isLoaded',true)
 		}else{
 			getCount()
 		}
@@ -49,6 +48,7 @@ function App() {
 				<Route path='/board' element={<Board/>}></Route>
 				<Route path='/weather' element={<Weather/>}></Route>
 				<Route path='/depression' element={<Depression/>}></Route>
+				<Route path='/interview' element={<Interview/>}></Route>
 			</Routes>
 			</div>
 			<Footer/>

@@ -28,12 +28,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
+	margin-top: 25px;
 	padding: 0 40px;
 	height: 400px;
 	width: 500px;
 	gap: 10px;
-	box-shadow: 5px 9px 15px -5px;
+	border:solid 2px #000;
 }
 .postContainer h1{
 	margin: 0;
@@ -54,15 +54,12 @@
 .postButton{
 	border: none;
 	padding: 10px 0;
-	background-color: turquoise;
+	background-color: rgb(255, 168, 168);
 	cursor: pointer;
 	border-radius: 5px;
-	box-shadow: 5px 9px 15px -5px black;
+	border: 2px solid black;
 }
-.postButton:hover{
-	transform: translateY(5px);
-	box-shadow: none;
-}
+
 
 
 .postList{
@@ -78,14 +75,14 @@
 	height: auto;
 	/* max-height: 600px; */
 	background-color: white;
-	box-shadow: 5px 9px 15px -5px black;
-	margin: 20px;
-	padding: 20px;
+	border:solid 2px #000;
+	margin: 15px;
+	padding: 10px 20px;
 	border-radius: 10px;
 }
-.postHeader h1{
+.postContainer h1{
 	text-align: center;
-	margin-top: 5px;
+	font-size: 180%;
 }
 
 .postContents .postTextContainer{
@@ -95,6 +92,9 @@
 	overflow:scroll;
 	width: 100%;
 	margin: 5px 0px;
+}
+.postTimeContainer{
+	font-size: 70%;
 }
 .postContents button{
 	flex:10%;
