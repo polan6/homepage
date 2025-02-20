@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import Header from './component/assets/Header'
-import Footer from './component/assets/Footer'
-import Home from './component/pages/Home'
-import Board from './component/pages/Board'
-import Weather from './component/pages/Weather'
-import Depression from './component/pages/Depression'
-import Interview from './component/pages/Interview'
+import Header from './component/assets/Header.jsx'
+import Footer from './component/assets/Footer.jsx'
+import Home from './component/pages/Home/Home.jsx'
+import Board from './component/pages/Board/Board.jsx'
+import Weather from './component/pages/Weather/Weather.jsx'
+import Depression from './component/pages/Depression/Depression.jsx'
+import Interview from './component/pages/Interview/Interview.jsx'
+import PeriodicTable from './component/pages/PeriodicTable/PeriodicTable.jsx'
 
 import './App.css'
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
@@ -49,6 +50,7 @@ function App() {
 				<Route path='/weather' element={<Weather/>}></Route>
 				<Route path='/depression' element={<Depression/>}></Route>
 				<Route path='/interview' element={<Interview/>}></Route>
+				<Route path='/periodictable' element={<PeriodicTable/>}></Route>
 			</Routes>
 			</div>
 			<Footer/>

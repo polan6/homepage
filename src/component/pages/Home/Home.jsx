@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
 import { faChain,  faHospital, faHouse,faPencil, faSun } from '@fortawesome/free-solid-svg-icons'
-import LinkList from '../assets/LinkList'
+import LinkList from '../../assets/LinkList'
 const Home = ({count}) => {
 	return (
 		<div className='content'>

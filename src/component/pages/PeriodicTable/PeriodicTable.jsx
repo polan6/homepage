@@ -1,0 +1,81 @@
+import React from 'react'
+import './PeriodicTable.css'
+const elements = [
+	{symbol: 'H', name: '水素', group: 1, period: 1},
+	{symbol: 'He', name: 'ヘリウム', group: 18, period: 1},
+	{symbol: 'Li', name: 'リチウム', group: 1, period: 2},
+	{symbol: 'Be', name: 'ベリリウム', group: 2, period: 2},
+	{symbol: 'B', name: 'ホウ素', group: 13, period: 2},
+	{symbol: 'C', name: '炭素', group: 14, period: 2},
+	{symbol: 'N', name: '窒素', group: 15, period: 2},
+	{symbol: 'O', name: '酸素', group: 16, period: 2},
+	{symbol: 'F', name: 'フッ素', group: 17, period: 2},
+	{symbol: 'Ne', name: 'ネオン', group: 18, period: 2},
+	{symbol: 'Na', name: 'ナトリウム', group: 1, period: 3},
+	{symbol: 'Mg', name: 'マグネシウム', group: 2, period: 3},
+	{symbol: 'Al', name: 'アルミニウム', group: 13, period: 3},
+	{symbol: 'Si', name: 'ケイ素', group: 14, period: 3},
+	{symbol: 'P', name: 'リン', group: 15, period: 3},
+	{symbol: 'S', name: '硫黄', group: 16, period: 3},
+	{symbol: 'Cl', name: '塩素', group: 17, period: 3},
+	{symbol: 'Ar', name: 'アルゴン', group: 18, period: 3},
+	{symbol: 'K', name: 'カリウム', group: 1, period: 4},
+	{symbol: 'Ca', name: 'カルシウム', group: 2, period: 4},
+	{symbol: 'Sc', name: 'スカンジウム', group: 3, period: 4},
+	{symbol: 'Ti', name: 'チタン', group: 4, period: 4},
+	{symbol: 'V', name: 'バナジウム', group: 5, period: 4},
+	{symbol: 'Cr', name: 'クロム', group: 6, period: 4},
+	{symbol: 'Mn', name: 'マンガン', group: 7, period: 4},
+	{symbol: 'Fe', name: '鉄', group: 8, period: 4},
+	{symbol: 'Co', name: 'コバルト', group: 9, period: 4},
+	{symbol: 'Ni', name: 'ニッケル', group: 10, period: 4},
+	{symbol: 'Cu', name: '銅', group: 11, period: 4},
+	{symbol: 'Zn', name: '亜鉛', group: 12, period: 4},
+	{symbol: 'Ga', name: 'ガリウム', group: 13, period: 4},
+	{symbol: 'Ge', name: 'ゲルマニウム', group: 14, period: 4},
+	{symbol: 'As', name: 'ヒ素', group: 15, period: 4},
+	{symbol: 'Se', name: 'セレン', group: 16, period: 4},
+	{symbol: 'Br', name: '臭素', group: 17, period: 4},
+	{symbol: 'Kr', name: 'クリプトン', group: 18, period: 4},
+	{symbol: 'Rb', name: 'ルビジウム', group: 1, period: 5},
+	{symbol: 'Sr', name: 'ストロンチウム', group: 2, period: 5},
+	{symbol: 'Y', name: 'イットリウム', group: 3, period: 5},
+	{symbol: 'Zr', name: 'ジルコニウム', group: 4, period: 5},
+	{symbol: 'Nb', name: 'ニオブ', group: 5, period: 5},
+	{symbol: '', name: '', group: 6, period: 5},
+	{symbol: '', name: '', group: 7, period: 5},
+	{symbol: '', name: '', group: 8, period: 5},
+	{symbol: '', name: '', group: 9, period: 5},
+	{symbol: '', name: '', group: 10, period: 5},
+	{symbol: '', name: '', group: 11, period: 5},
+	{symbol: '', name: '', group: 12, period: 5},
+	{symbol: '', name: '', group: 13, period: 5},
+	{symbol: '', name: '', group: 14, period: 5},
+	{symbol: '', name: '', group: 15, period: 5},
+	{symbol: '', name: '', group: 16, period: 5},
+	{symbol: '', name: '', group: 17, period: 5},
+	{symbol: '', name: '', group: 18, period: 5},
+];
+const PeriodicTable = () => {
+	return (
+		<div className='periodictable__content'>
+			<h1>元素周期表</h1>
+			<div className='periodic-table__container'>
+			<div className='periodic-table'>
+			{elements.map(element=>{
+				const style={
+					gridColumn:element.group,
+					gridRow:element.period
+				}
+				return (<div className='element' key={element.symbol}
+				style={style} data-name={element.name}>
+					{element.symbol}
+				</div>)
+			})}
+			</div>
+			</div>
+		</div>
+	)
+}
+
+export default PeriodicTable
