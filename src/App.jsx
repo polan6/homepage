@@ -31,8 +31,7 @@ function App() {
 		setAccessCount(snap.data()?.count)
 	}
 	useEffect(()=>{
-		// if(import.meta.env.SECRET_ENV) console.log('secret!!')
-		// console.log(import.meta.env.VITE_ENV)
+
 		if(process.env.NODE_ENV==="production"&&(!isLoaded)){
 			access()
 			setIsLoaded(true)
