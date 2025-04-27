@@ -15,10 +15,11 @@ export default defineConfig({
 	base: process.env.GITHUB_PAGES
 	? "homepage"
 	: "./",
-  plugins: [react(),env({ prefix: "REACT_APP", mountedPath: "process.env" })],
+  plugins: [react(),env({ prefix: "VITE", mountedPath: "process.env" })],
 	define: {
     // "展開せずにそのまま文字列としてコード内に残す"
     'process.env.VITE_API_KEY': 'process.env.VITE_API_KEY',
+    'process.env.REACT_APP_API_KEY': 'process.env.REACT_APP_API_KEY',
     'import.meta.env.VITE_API_KEY': 'import.meta.env.VITE_API_KEY'
   }
 })
