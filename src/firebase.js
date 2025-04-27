@@ -10,9 +10,7 @@ import {getFirestore} from "firebase/firestore"
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  // apiKey: process.env.VITE_API_KEY,
-	// apikey:import.meta.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyB1x6aOUfLL17gtvyH9D6iS89Hmxm6_qNg", //firebaseのapiキーは公開を前提としている
   authDomain: "homepage-board-88e25.firebaseapp.com",
   projectId: "homepage-board-88e25",
   storageBucket: "homepage-board-88e25.firebasestorage.app",
