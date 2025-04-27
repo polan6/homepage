@@ -22,7 +22,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-console.log(import.meta.env.FIREBASE_API_KEY)
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth=getAuth(app)
