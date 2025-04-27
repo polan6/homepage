@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChain,  faCommentDots,  faHospital, faHouse,faPencil, faQ, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const LinkList = ({isHam}) => {
 	const toggleHamburger=()=>{
@@ -52,7 +53,7 @@ const LinkList = ({isHam}) => {
 			</li> */}
 			<li className={isHam?'header__menu-items-item':"links__items-item"}>
 				<a href="https://github.com/polan6/homepage" onClick={isHam?toggleHamburger:()=>{}}>
-					<FontAwesomeIcon icon={faChain} />
+					<FontAwesomeIcon icon={faGithub} />
 					GitHub
 				</a>
 			</li>
