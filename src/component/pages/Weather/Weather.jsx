@@ -49,7 +49,7 @@ const Weather = () => {
 
 	return (
 		<div className='weather__content'>
-			<h1>天気予報{"(β)"}</h1>
+			<h1>天気予報</h1>
 			<div>
 				地方:
 				<select onChange={selectRegion} value={region}>

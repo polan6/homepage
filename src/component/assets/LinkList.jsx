@@ -38,12 +38,12 @@ const LinkList = ({isHam}) => {
 					うつ病チェック
 				</Link>
 			</li>
-			<li className={isHam?'header__menu-items-item':"links__items-item"}>
+			{/* <li className={isHam?'header__menu-items-item':"links__items-item"}>
 				<Link to="/periodictable" onClick={isHam?toggleHamburger:()=>{}}>
 					<FontAwesomeIcon icon={faHospital} />
 					元素周期表
 				</Link>
-			</li>
+			</li> */}
 			{/* <li className={isHam?'header__menu-items-item':"links__items-item"}>
 				<Link to="/interview" onClick={isHam?toggleHamburger:()=>{}}>
 					<FontAwesomeIcon icon={faCommentDots} />

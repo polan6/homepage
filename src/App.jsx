@@ -8,6 +8,7 @@ import Depression from './component/pages/Depression/Depression.jsx'
 import Interview from './component/pages/Interview/Interview.jsx'
 import PeriodicTable from './component/pages/PeriodicTable/PeriodicTable.jsx'
 
+
 import './App.css'
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 
@@ -30,6 +31,8 @@ function App() {
 		setAccessCount(snap.data()?.count)
 	}
 	useEffect(()=>{
+		// if(import.meta.env.SECRET_ENV) console.log('secret!!')
+		// console.log(import.meta.env.VITE_ENV)
 		if(process.env.NODE_ENV==="production"&&(!isLoaded)){
 			access()
 			setIsLoaded(true)
@@ -51,6 +54,7 @@ function App() {
 				<Route path='/depression' element={<Depression/>}></Route>
 				<Route path='/interview' element={<Interview/>}></Route>
 				<Route path='/periodictable' element={<PeriodicTable/>}></Route>
+				{/* <Route path='/periodictable' element={<PeriodicTable/>}></Route> */}
 			</Routes>
 			</div>
 			<Footer/>

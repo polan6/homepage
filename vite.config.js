@@ -12,8 +12,8 @@ export default defineConfig({
       }
     }
   },
-	base: process.env.GITHUB_PAGES  // この行を追加
-	? "homepage"          // この行を追加
-	: "./",                     // この行を追加
+	base: process.env.GITHUB_PAGES
+	? "homepage"
+	: "./",
   plugins: [react(),env({ prefix: "REACT_APP", mountedPath: "process.env" })],
 })
