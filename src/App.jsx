@@ -31,7 +31,7 @@ function App() {
 		setAccessCount(snap.data()?.count)
 	}
 	useEffect(()=>{
-
+		console.log(import.meta.env.VITE_ENV)
 		if(process.env.NODE_ENV==="production"&&(!isLoaded)){
 			access()
 			setIsLoaded(true)

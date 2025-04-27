@@ -10,7 +10,8 @@ import {getFirestore} from "firebase/firestore"
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: import.meta.env.VITE_API_KEY,
+	// apikey:import.meta.env.FIREBASE_API_KEY,
   authDomain: "homepage-board-88e25.firebaseapp.com",
   projectId: "homepage-board-88e25",
   storageBucket: "homepage-board-88e25.firebasestorage.app",
@@ -20,6 +21,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+console.log(import.meta.env.FIREBASE_API_KEY)
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth=getAuth(app)
